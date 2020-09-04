@@ -33,7 +33,7 @@ class ApiController extends Controller
             'signature_key' => $request->signature_key,
         ]);
 
-        return response()->json($response);        
+        return $response;
         
     }
 

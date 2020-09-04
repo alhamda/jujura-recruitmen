@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/register', 'HomeController@register')->name('register');
+Route::post('/register', 'HomeController@register')->name('register');
+
+Route::get('/product', 'HomeController@product')->name('product');
+Route::post('/product', 'HomeController@product')->name('product');
+
+Route::get('/sales/list', 'HomeController@salesList')->name('sales.list');
+Route::post('/sales/list', 'HomeController@salesList')->name('sales.list');
+
+Route::get('/sales/insert', 'HomeController@salesInsert')->name('sales.insert');
+Route::post('/sales/insert', 'HomeController@salesInsert')->name('sales.insert');
